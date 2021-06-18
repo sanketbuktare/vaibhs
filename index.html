@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 
-    <title>Home</title>
+    <title>Eminent Technologies</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -55,10 +55,9 @@
     <!----Navigation ends---->
 
     <!--- Content ---->
-    
-    <div class="jumbotron" >
+    <div class="jumbotron" id="about">
         <img src="https://images.unsplash.com/photo-1603037750986-9b5feaa76b39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
-        <div class="smalldesc text-center" id="about" style="position: relative; padding-top: 80px">
+        <div class="smalldesc text-center" >
             <h1 style="font-family: 'Bree Serif';   "> Welcome to Eminent Tech</h1>
             
             <p style="font-family: 'Bree Serif';">
@@ -66,9 +65,7 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
             </p>
         
-            <a href="#" type="button" class="btn btn-primary" style="background-color: silver; color: black;">Read More</a>
-                
-            </div>
+            <a href="#about-us" type="button" class="btn btn-primary" style="background-color: rgb(141, 137, 137); border: 2px solid white; color: rgb(0, 0, 0); border-radius: 12px"><b>Read More</b></a>       
             
         </div>
         <!-- <div>
@@ -77,13 +74,13 @@
     </div>
     <!----Content ends---->
 
-    <!----Content---->
+    <!----Services / Products---->
     <section class="service-area" id="products">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xs-12 text-center">
                 <div class="section-title m-3">
-                  <h1 ><b>PRODUCTS</b></h1> <br>
+                  <h2 class="h1-responsive font-weight-bold text-center">PRODUCTS</h2> <br>
                   <p>
                     The exceptional reliability of our products is the result of our special focus on quality. Even after thousands of running hours our products just keep on working. Compressors and pumps from Dürr Technik impress many with their compactness and efficiency and also their safety in the workplace and their environmental contribution.
                   </p>
@@ -145,22 +142,51 @@
           </div>
         </div>
     </section>
-    <!----Content ends---->
+    <!----Services / Products ends---->
     
+    <!-------About us---------->
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md"> 
+                    <h2 class="h1-responsive font-weight-bold text-center">ABOUT US</h2>
+                    <p class="text-center w-responsive mx-auto">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Fugit, error amet numquam se quasi, veritatis totam voluptas.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Fugit, error amet numquam se quasi, veritatis totam voluptas.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Fugit, error amet numquam se quasi, veritatis totam voluptas.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Fugit, error amet numquam se quasi, veritatis totam voluptas.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Fugit, error amet numquam se quasi, veritatis totam voluptas.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Fugit, error amet numquam se quasi, veritatis totam voluptas.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Fugit, error amet numquam se quasi, veritatis totam voluptas.
+                    </p>
+                </div>
+                <div class="col-md abt-us-img">
+                    <img src="photo-1.jpg" alt="abt-us" loading="lazy"> 
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-------About us ends---------->
+        
 
     <!-------Contact details--------->
-
     <section class="contact-us" id="contact-us">
 
         <!-- Section heading -->
         <h2 class="h1-responsive font-weight-bold text-center">CONTACT US</h2>
         <!-- Section description -->
         <p class="text-center w-responsive mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Fugit, error amet numquam se quasi, veritatis totam voluptas.</p>
+        Fugit, error amet numquam se quasi, veritatis totam voluptas.
+        </p>
     
-        
-    
-        <!-- Grid column -->
         <div class="row text-center">
             <div class="col-md-3"></div>
             <div class="col">
@@ -177,12 +203,9 @@
             </div>
             <div class="col-md-3"></div>
         </div>
-        <!-- Grid column -->
-    
-        </div>
-        <!-- Grid row -->
     
     </section>
+    <!-------Contact details ends--------->
 
 
     <!-----Footer----->
@@ -218,6 +241,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     // Transparent nav bar
     /* $(window).scroll(function() {
@@ -229,19 +253,31 @@
       }); */
 
     // Add active class to the current button (highlight it)
-    var header = document.getElementById('navbar');
-    var btns = header.getElementsByClassName("nav-item");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-    }
+    /* $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    }); */
 
     // read more button
-    document.querySelector('#read-more').addEventListener('click', function() {
+    /* document.querySelector('#read-more').addEventListener('click', function() {
         document.querySelector('.smalldesc').classList.toggle('expand');
+    }); */
+
+    // Slide Animation
+    // Add smooth scrolling to all links
+    var $root = $('html, body');
+    $('a').click(function() {
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top - 120
+        }, 700, function () {
+            window.location.hash = href;
+        });
+        return false;
     });
+    
 </script>
 </html>

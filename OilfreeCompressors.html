@@ -13,7 +13,7 @@
 
     <style>
         body {
-            background-color: rgb(46, 44, 44);
+            background-color: #c0c0c0;
             min-height: 100%;
         }
         .navbar {
@@ -23,60 +23,121 @@
             box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.349), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin-bottom: 50px;
         }
+        
         .navbar-brand > img {
             width: 250;
             height: 70;
             border-radius: 8px;
         }
-        .navbar > .container {
-            align-items: center;
-            justify-content: center;
+        
+        /* nav.navbar.transparent {
+            background-color: rgba(17, 17, 46, 0.171);
+        } */
+        
+        .navbar-toggler {
+            border: 1px solid white;
+            border-radius: 6px;
         }
-        .wrapper {
-            background: rgb(26, 21, 21);
-            padding: 30px;
-            margin: 10px;
-            margin-top: 120px;
+        
+        .navbar-toggler > i {
             color: white;
         }
+        
+        .navbar-nav.ml-auto li {
+            margin: 10px;
+            padding: 5px;
+        }
+        
+        .navbar-nav.ml-auto li a {
+            font-size: 20px;
+            color: white !important;
+        }
+        
+        .navbar-nav.ml-auto li a:hover {
+            color: rgb(197, 191, 191) !important;
+        }
+        
+        .active {
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 100px;
+            margin: 2px;
+        }
+        .wrapper {
+            
+            padding: 30px;
+            margin-top: 90px;
+            background: #141E30;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
+            color: white;
+            padding-bottom: 70px;
+        }
         .products-wrapper {
-            background:rgb(34, 14, 14);
-            box-shadow: 0 0 10px #fffdfd25;
+            background: #ffffff;
             overflow: hidden;
-            padding: 10px 16px;
+            padding: 12px 6px;
             transition: all 0.5s ease 0s;
             transition: transform 0.2s;
             z-index: 9;
-            margin-top: 20px;
+            margin-bottom: 50px;
+            border-radius: 12px;
+            min-width: 25ch;
+            color: black;
         }
         .products-wrapper:hover {
-            background-color: #020202;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.651), 0 6px 20px 0 rgba(0, 0, 0, 0.459);
+            background-color: #1c2435;
+            color: white;
             transform: scale(1.05);
         }
-        
+        @media only screen and (max-width: 600px) {
+            .navbar-brand > img {
+                width: 150;
+                height: 50;
+            }
+        }
         
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top static-top">
-        <a href="index.html">
-            <i class="fa fa-chevron-circle-left fa-2x" style="color: white;"></i>
-        </a>
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="#">
                 <img src="logo.png" alt="">
             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto" id="navbar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="navbar-nav ml-auto"></div>
     </nav>
+    <!----Navigation ends---->
 
     <!-------Products--------->
     <div class="wrapper">
         <div class="container">
-            <h2 class="modal-title text-center my-1">Oilfree Compressors</h2>
+            <h2 class="modal-title text-center my-1 mb-4">Oilfree Compressors</h2>
             <div class="row">
-                <div class="col">
+                <div class="col d-flex align-items-stretch h-100">
                     <div class="card products-wrapper" >
                         <img class="card-img-top" src="Images/Oilfree-Compressors/kk8.png" loading="lazy" alt="kk8">
                         <div class="card-body">
@@ -88,7 +149,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col">
+                <div class="col d-flex align-items-stretch h-100">
                     <div class="card products-wrapper">
                         <img class="card-img-top" src="Images/Oilfree-Compressors/kk15.png" loading="lazy" alt="kk8">
                         <div class="card-body">
@@ -100,7 +161,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col">
+                <div class="col d-flex align-items-stretch h-100">
                     <div class="card products-wrapper">
                         <img class="card-img-top" src="Images/Oilfree-Compressors/kk40.png" loading="lazy" alt="kk8">
                         <div class="card-body">
@@ -112,7 +173,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col">
+                <div class="col d-flex align-items-stretch h-100">
                     <div class="card products-wrapper" >
                         <img class="card-img-top" src="Images/Oilfree-Compressors/dc-compressors.png" loading="lazy" alt="kk8">
                         <div class="card-body">
@@ -126,7 +187,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col d-flex align-items-stretch h-100">
                     <div class="card products-wrapper" >
                         <img class="card-img-top" src="Images/Oilfree-Compressors/kk70.png" loading="lazy" alt="kk8">
                         <div class="card-body">
@@ -138,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col d-flex align-items-stretch h-100">
                     <div class="card products-wrapper" >
                         <img class="card-img-top" src="Images/Oilfree-Compressors/kk70-silent.png" loading="lazy" alt="kk8">
                         <div class="card-body">
@@ -150,7 +211,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col d-flex align-items-stretch h-100">
                     <div class="card products-wrapper" >
                         <img class="card-img-top" src="Images/Oilfree-Compressors/marathon.png" loading="lazy" alt="kk8">
                         <div class="card-body">
@@ -162,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col d-flex align-items-stretch h-100">
                     
                 </div>
             </div>
