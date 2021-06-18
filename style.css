@@ -248,4 +248,7 @@ footer {
         width: 150;
         height: 50;
     }
+    .jumbotron {
+        height: 600px;
+    }
 }
