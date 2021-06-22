@@ -113,11 +113,25 @@ body {
 }
 /*=== about us ends ===*/
 
+
 /*=== Footer ===*/
 footer {
     color: white;
 }
 /*=== footer ends ===*/
+
+/*=== lazy loading ===*/
+.lazy-img {
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 900ms;
+}
+.fade {
+    transform: translate(0);
+    opacity: 1.0;
+    transition: all 900ms;
+}
+/*=== lazy loading ends ===*/
 
 /*==== Products Wrap ===*/
 #products {
@@ -139,9 +153,9 @@ footer {
     transition: all 0.5s ease 0s;
     transition: transform 0.2s;
     z-index: 9;
-    margin-bottom: 50px;
     border-radius: 12px;
-    height: 350px;
+    height: 100%;
+    margin-bottom: 50px;
     color: black;
 }
 
@@ -167,11 +181,20 @@ footer {
 
 /*=== Services Wrap ===*/
 #services {
-    margin: 30px 0px;
+    padding: 30px 0px 50px 0px;
+
+    background: #2b5876;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white;
 }
 
 .service-wrap {
     padding: 16px;
+    margin: 2px;
+    background-color: #00000046;
+    border-radius: 12px;
 }
 /*=== Services Wrap ===*/
 

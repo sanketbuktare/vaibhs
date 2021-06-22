@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-lg fixed-top static-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="ET logo 1.png" alt="">
+                <img src="ET logo 1.png" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
@@ -88,27 +88,27 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
               <div class="product-wrap text-center">
-                    <img src="Images/OILFREE COMPRESSORS.png" alt="" loading="lazy" class="card-img-top product-image">
+                    <img data-lazy="Images/OILFREE COMPRESSORS.png" alt="" loading="lazy" class="card-img-top product-image lazy-img">
 
                     <h3>OilFree Compressors</h3>
                     
                     <a href="OilfreeCompressors.html" class="stretched-link"></a>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
               <div class="product-wrap text-center">
-                <img src="Images/COMPRESSOR STATIONS (2).png" alt="" loading="lazy" class="card-img-top product-image">
+                <img data-lazy="Images/COMPRESSOR STATIONS (2).png" alt="" loading="lazy" class="card-img-top product-image lazy-img">
                 
                 <h3>Compressor Stations</h3>
                 
                 <a href="CompressorStations.html" class="stretched-link"></a>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
               <div class="product-wrap text-center">
-                <img src="Images/REFUELLING PUMPS.png" alt="" loading="lazy" class="card-img-top product-image">
+                <img data-lazy="Images/REFUELLING PUMPS.png" alt="" loading="lazy" class="card-img-top product-image lazy-img">
 
                 <h3>Refueling Pumps</h3>
                 
@@ -121,7 +121,7 @@
     <!----Products ends---->
     
     <!------ Services -------->
-        <section class="services" id="services">
+        <section class="services m-0" id="services">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xs-12 text-center">
@@ -134,7 +134,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="service-wrap text-center">
                           <div class="service-icon">
-                            <i class="fa fa-leaf"></i>
+                            <img data-lazy="https://static.wixstatic.com/media/00f282_1f10b9dd5e6641af8c3eb289d1196cf2~mv2.png/v1/crop/x_5,y_33,w_192,h_136/fill/w_131,h_93,al_c,q_85,usm_0.66_1.00_0.01/Rotary_edited.webp" alt="service" loading="lazy" class="lazy-img"/>
                           </div>
                           <h3>Service #1</h3>
                           <p>
@@ -145,7 +145,7 @@
                       <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="service-wrap text-center">
                           <div class="service-icon">
-                            <i class="fa fa-leaf"></i>
+                            <img data-lazy="https://static.wixstatic.com/media/00f282_1a95ded137b749d2bab1dc74d6389d7f~mv2.png/v1/fill/w_95,h_95,al_c,q_85,usm_0.66_1.00_0.01/Pump_edited.webp" alt="service" loading="lazy" class="lazy-img"/>
                           </div>
                           <h3>Service #2</h3>
                           <p>
@@ -156,7 +156,7 @@
                       <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="service-wrap text-center">
                           <div class="service-icon">
-                            <i class="fa fa-leaf"></i>
+                            <img data-lazy="https://static.wixstatic.com/media/00f282_57e463a688a6431f80eabd149af66865~mv2.png/v1/fill/w_93,h_93,al_c,q_85,usm_0.66_1.00_0.01/Blowers_edited.webp" alt="service" loading="lazy" class="lazy-img"/>
                           </div>
                           <h3>Service #3</h3>
                           <p>
@@ -240,6 +240,7 @@
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="lazyLoad.js"></script>
 <script>
     // Transparent nav bar
     /* $(window).scroll(function() {
@@ -276,6 +277,7 @@
         });
         return false;
     });
+
     
 </script>
 </html>
