@@ -24,6 +24,7 @@
             min-height: 100%;
         }
         
+        /*=== Navbar ===*/
         .navbar {
             -webkit-transition: all 0.4s ease;
             transition: all 0.4s ease;
@@ -70,14 +71,70 @@
             border-radius: 100px;
             margin: 2px;
         }
+        /*=== Navbar ends ===*/
+
+        /*=== Contact Us ===*/
         .contact-us {
-            margin-top: 120px !important;
+            margin-top: 110px !important;
             padding: 40px;
             color: white;
             margin: 0;
             background: #232526;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #414345, #232526 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        /*=== Contact Us ends ===*/
+
+        /*=== Footer ===*/
+        footer {
+            background-color: rgb(17, 17, 46);
+            padding: 20px;
+            padding-bottom: 0;
+            color: white;
+        }
+
+        .footer-nav li {
+            list-style: none;
+            margin: 6px;
+            display: inline;
+        }
+
+        .footer-nav > li > .fa {
+            font-size: 20px;
+            height: 30px;
+            width: 30px;
+            font-size: 20px;
+            padding: 10px 28px 28px 12px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+
+        .fa.fa-facebook {
+            color: blue;
+            background-color: white;
+        }
+
+        .fa.fa-twitter {
+            color: white;
+            background-color: skyblue;
+        }
+
+        .fa.fa-linkedin {
+            color: white;
+            background-color: blue;
+        }
+
+        .fa.fa-youtube {
+            color: red;
+            background-color: white;
+        }
+        /*=== Footer ends ===*/
+
+        @media only screen and (max-width: 600px) {
+            .navbar-brand > img {
+                width: 150;
+                height: 60;
+            }
         }
     </style>
 </head>
@@ -117,31 +174,154 @@
     <section class="contact-us" id="contact-us">
 
         <!-- Section heading -->
-        <h2 class="h1-responsive font-weight-bold text-center">CONTACT US</h2>
-        <!-- Section description -->
-        <p class="text-center w-responsive mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Fugit, error amet numquam se quasi, veritatis totam voluptas.
-        </p>
+        <h2 class="h1-responsive font-weight-bold text-center my-4">CONTACT US</h2>
+        
+        <div class="row p-3">
+            <div class="col-md-7 mb-md-0 mb-5 ">
+                
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
     
-        <div class="row text-center">
-            <div class="col-md-3"></div>
-            <div class="col">
-                <i class="fa fa-map-marker fa-2x mt-4 blue-text"></i>
-                <p>Location</p>
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-3">
+                                <label for="name" class="">Your name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name">
+                                
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-3">
+                                <label for="email" class="">Your email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
+                                
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-3">
+                                <label for="name" class="">Product Category</label>
+                                <input type="text" id="pcategory" name="pcategory" class="form-control " placeholder="Enter Product Category">
+                                
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-3">
+                                <label for="email" class="">Product Name</label>
+                                <input type="text" id="pname" name="pname" class="form-control" placeholder="Enter Product Name">
+                                
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-3">
+                                <label for="subject" class="">Phone Number</label>
+                                <input type="tel" id="phoneno" name="phoneno" class="form-control" placeholder="Enter Contact Number">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="col-md-12">
+    
+                            <div class="md-form">
+                                <label for="message">Your message</label>
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Write your message here"></textarea>
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                    <!--Grid row-->
+    
+                </form>
+    
+                <div class="text-center text-md-left">
+                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                </div>
+                <div class="status"></div>
             </div>
-            <div class="col">
-                <i class="fa fa-phone fa-2x mt-4 blue-text"></i>
-                <p>+12345 67890</p>
+
+            <!--Grid column-->
+            <div class="col-md-5 text-center p-2">
+                <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                    a matter of hours to help you.
+                </p>
+                <ul class="list-unstyled mb-4">
+                    <li><i class="fa fa-map-marker m-2 fa-2x"></i>
+                        <p>San Francisco, CA 94126, USA</p>
+                    </li>
+
+                    <li><i class="fa fa-phone m-2 fa-2x"></i>
+                        <p>+ 01 234 567 89</p>
+                    </li>
+
+                    <li><i class="fa fa-envelope m-2 fa-2x"></i>
+                        <p>eminenttechnologies@gmail.com</p>
+                    </li>
+                </ul>
             </div>
-            <div class="col">
-                <i class="fa fa-envelope fa-2x mt-4 blue-text"></i>
-                <p class="mb-0">contact@example.com</p>
-            </div>
-            <div class="col-md-3"></div>
+            <!--Grid column-->
+
         </div>
     
     </section>
     <!-------Contact details ends--------->
+
+    <!-----Footer----->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <p style="margin: 12px;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                        Fugit, error amet numquam se quasi, veritatis totam voluptas. 
+                    </p>
+                </div>
+                <div class="col"> 
+                    <ul class="footer-nav">
+                        <li> <a href="https://www.facebook.com/" class="fa fa-facebook" target="blank"></a> </li>
+                        <li> <a href="https://twitter.com/" class="fa fa-twitter" target="blank"></a> </li>
+                        <li> <a href="https://linkedin.com" class="fa fa-linkedin" target="blank"></a> </li>
+                        <li> <a href="https://youtube.com" class="fa fa-youtube" target="blank"></a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 7px;">
+                <p style="text-align: center;">
+                    &copy; Eminent Technologies 2021 <br> <small>All Rights Reserved.</small>
+                </p>
+            </div>
+        </div>
+    </footer>
+  <!-----Footer ends------>
 
     <!----------JS------------->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -149,4 +329,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    // Product Category and Product Name
+    window.addEventListener('load', () => {
+        const params = (new URL(document.location)).searchParams;
+        const pCat = params.get('pcat');
+        const pName = params.get('pname');
+        //console.log(pCat)
+        //console.log(pName)
+        var productCategory = document.getElementById("pcategory");
+        var productName = document.getElementById("pname")
+        productCategory.value = pCat;
+        productName.value = pName;
+        if (productCategory.value.length !== 0 && productName !== 0) {
+            productCategory.disabled = true;
+            productName.disabled = true;
+        }
+    });
+
+    
+</script>
 </html>
