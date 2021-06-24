@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 
+    <!------- Twilo intl-tel-input -------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    
     <style>
         body {
             background-color: #c0c0c0;
@@ -83,6 +88,15 @@
             background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #414345, #232526 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
+
+        .phoneno {
+            color: black;
+        }
+
+        .phoneno > label {
+            color: white;
+        }
+        
         /*=== Contact Us ends ===*/
 
         /*=== Footer ===*/
@@ -129,7 +143,7 @@
             background-color: white;
         }
         /*=== Footer ends ===*/
-
+        
         @media only screen and (max-width: 600px) {
             .navbar-brand > img {
                 width: 150;
@@ -179,7 +193,7 @@
         <div class="row p-3">
             <div class="col-md-7 mb-md-0 mb-5 ">
                 
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <form id="contact-form" name="contact-form" action="ContactUs.html" method="GET">
     
                     <!--Grid row-->
                     <div class="row">
@@ -187,8 +201,8 @@
                         <!--Grid column-->
                         <div class="col-md-6">
                             <div class="md-form mb-3">
-                                <label for="name" class="">Your name</label>
-                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name">
+                                <label for="name" class="">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" data-onunload="true" required> 
                                 
                             </div>
                         </div>
@@ -197,8 +211,35 @@
                         <!--Grid column-->
                         <div class="col-md-6">
                             <div class="md-form mb-3">
-                                <label for="email" class="">Your email</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
+                                <label for="email" class="">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" data-onunload="true" required>
+                                <div class="emailErr" style="color: white;"></div>
+                            </div>
+                            
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+                    
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-1">
+                                <label for="name" class="">Product Category</label>
+                                <input type="text" id="pcategory" name="pcategory" class="form-control " placeholder="Enter Product Category" data-onunload="true">
+                                
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-1">
+                                <label for="email" class="">Product Name</label>
+                                <input type="text" id="pname" name="pname" class="form-control" placeholder="Enter Product Name" data-onunload="true">
                                 
                             </div>
                         </div>
@@ -206,41 +247,18 @@
     
                     </div>
                     <!--Grid row-->
+                    
+                    <div class="alert-info mb-3" style="background: transparent; color: white"></div>
 
                     <!--Grid row-->
                     <div class="row">
-    
-                        <!--Grid column-->
                         <div class="col-md-6">
-                            <div class="md-form mb-3">
-                                <label for="name" class="">Product Category</label>
-                                <input type="text" id="pcategory" name="pcategory" class="form-control " placeholder="Enter Product Category">
-                                
+                            <div class="md-form mb-3 phoneno">
+                                <label for="phoneno" class="">Phone Number</label>
+                                <input type="tel" id="phoneno" name="phoneno" class="form-control" placeholder="Enter Contact Number" required>
+                                <div class="phonenoErr" style="color: white;"></div>
                             </div>
-                        </div>
-                        <!--Grid column-->
-    
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-3">
-                                <label for="email" class="">Product Name</label>
-                                <input type="text" id="pname" name="pname" class="form-control" placeholder="Enter Product Name">
-                                
-                            </div>
-                        </div>
-                        <!--Grid column-->
-    
-                    </div>
-                    <!--Grid row-->
-    
-                    <!--Grid row-->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="md-form mb-3">
-                                <label for="subject" class="">Phone Number</label>
-                                <input type="tel" id="phoneno" name="phoneno" class="form-control" placeholder="Enter Contact Number">
-                                
-                            </div>
+                            
                         </div>
                     </div>
                     <!--Grid row-->
@@ -251,26 +269,32 @@
                         <!--Grid column-->
                         <div class="col-md-12">
     
-                            <div class="md-form">
-                                <label for="message">Your message</label>
-                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Write your message here"></textarea>
+                            <div class="md-form mb-3">
+                                <label for="message">Your Message</label>
+                                <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea" placeholder="Write your message here"></textarea>
                                 
                             </div>
     
                         </div>
                     </div>
                     <!--Grid row-->
+
+                    <div class="row">
+
+                        <div class="col-md md-form text-center text-md-left mb-3">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+
+                    </div>
     
                 </form>
     
-                <div class="text-center text-md-left">
-                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-                </div>
-                <div class="status"></div>
+                
+                <div class="status text-center" style="color:white; font-size: 20px; font-weight: 600"></div>
             </div>
 
             <!--Grid column-->
-            <div class="col-md-5 text-center p-2">
+            <div class="col-md-5 text-center pt-4">
                 <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
                     a matter of hours to help you.
                 </p>
@@ -342,12 +366,105 @@
         var productName = document.getElementById("pname")
         productCategory.value = pCat;
         productName.value = pName;
+
+        var preFill = document.querySelector('.alert-info');
+
         if (productCategory.value.length !== 0 && productName !== 0) {
             productCategory.disabled = true;
             productName.disabled = true;
+
+            preFill.style.display = '';
+            preFill.innerHTML = `<small>Product Category and Product Name are pre-filled based on your selection in the <a href="index.html#products"> <strong>Products </strong> </a> page </small>`;
         }
     });
 
+    // Mobile number with country code
+    function getIp(callback) {
+        fetch('https://ipinfo.io/json?token=39b97da90c47a1', { headers: { 'Accept': 'application/json' }})
+          .then((resp) => resp.json())
+          .catch(() => {
+            return {
+              country: 'us',
+            };
+          })
+          .then((resp) => callback(resp.country));
+    }
+    const phoneInputField = document.querySelector("#phoneno");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "auto",
+        geoIpLookup: getIp,
+        utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
     
+    // form changes saved or not 
+    /*function enableBeforeUnload() {
+        window.onbeforeunload = function (e) {
+            return "Sure you want to leave?";
+        };
+    }
+    function disableBeforeUnload() {
+        window.onbeforeunload = null;
+    }*/
+
+    // On form submit
+    const form = document.getElementById('contact-form');
+
+    
+    const emailErr = document.querySelector('.emailErr');
+    const phonenoErr = document.querySelector('.phonenoErr')
+    const status = document.querySelector('.status');
+
+    form.addEventListener('submit', (e) => {
+    
+        window.onbeforeunload = null;
+
+        const email = event.target['email'].value;
+        const phoneno =  event.target['phoneno'].value;
+
+        let errors = []
+        
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(email)){
+            errors.push("Please enter a valid email")
+            e.preventDefault();
+            emailErr.innerHTML = `<small> Please enter a valid email </small>`;
+        } else emailErr.innerHTML = ''
+
+        if (phoneno.length !== 10) {
+            errors.push("Please enter a valid number")
+            e.preventDefault();
+            phonenoErr.innerHTML = `<small> Please enter a valid phone number </small>`
+        } else phonenoErr.innerHTML = ''
+        if (errors.length > 0) {
+            e.preventDefault();
+            status.innerHTML = "Please enter all fields correctly"
+        } else {
+            e.preventDefault();
+            
+            status.innerHTML = "Form submitted successfully!"
+        }
+        
+        
+    })
+
+    $(document).ready(function(){
+        window.onbeforeunload = function(e) {
+            var returnFlag = false;
+            $('textarea, input').each(function(){
+                if($(this).attr('data-onunload') == 'true' && $(this).val() != '')
+                    returnFlag = true;
+            });
+    
+            if(returnFlag)
+                return "Sure you want to leave?";   
+        };
+    });
+    
+    
+    
+    
+
+
 </script>
 </html>
