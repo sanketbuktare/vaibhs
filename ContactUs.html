@@ -223,7 +223,7 @@
                     <!--Grid row-->
                     
                     <!--Grid row-->
-                    <div class="row">
+                    <div class="row ">
     
                         <!--Grid column-->
                         <div class="col-md-6">
@@ -245,10 +245,11 @@
                         </div>
                         <!--Grid column-->
     
+                        <div class="col-md-12 alert-info mb-3" style="background: transparent; color: white"></div>
                     </div>
                     <!--Grid row-->
                     
-                    <div class="alert-info mb-3" style="background: transparent; color: white"></div>
+                    
 
                     <!--Grid row-->
                     <div class="row">
@@ -392,6 +393,7 @@
     const phoneInputField = document.querySelector("#phoneno");
     const phoneInput = window.intlTelInput(phoneInputField, {
         initialCountry: "auto",
+        separateDialCode: true,
         geoIpLookup: getIp,
         utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",

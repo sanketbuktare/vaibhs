@@ -188,7 +188,6 @@ footer {
     box-shadow: 0 0 10px #fffdfd25;
     overflow: hidden;
     padding: 25px 35px;
-    position: relative;
     transition: all 0.5s ease 0s;
     transition: transform 0.2s;
     z-index: 9;
@@ -276,6 +275,9 @@ footer {
         height: 60;
     }
     .jumbotron {
-        height: 700px;
+        height: 580px;
+    }
+    .smalldesc > h1 {
+        font-size: 34px;
     }
 }
